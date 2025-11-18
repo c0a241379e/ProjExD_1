@@ -35,7 +35,7 @@ def main():
 
         pg.display.update()
         tmr += 1        
-        clock.tick(100)
+        clock.tick(200)
         
 
 
