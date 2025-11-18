@@ -20,6 +20,11 @@ def main():
         tmr += 1        
         clock.tick(10)
         
+        kk_img = pg.image.load("fig/3.png")
+        kk_img = pg.transform.flip(kk_img,True,False)
+        kk_img = pg.transform.rotozoom(kk_img,10,1.0)
+        
+
 
 
 if __name__ == "__main__":
