@@ -29,6 +29,7 @@ def main():
             bg_x = 0
         #背景を二枚準備
         screen.blit(bg_img, [bg_x, 0])
+        #残像の補正
         screen.blit(bg_img, [bg_x + 800, 0])
         #こうかとんを表示
         screen.blit(kk_img, [300, 200]) 
