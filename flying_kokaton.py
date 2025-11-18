@@ -44,7 +44,7 @@ def main():
 
         screen.blit(kk_img, kk_rct)
 
-
+        #プログラム名の変更が実施済みなため、ここに説明を付与する
 
         pg.display.update()
         tmr += 1
