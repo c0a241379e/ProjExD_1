@@ -11,6 +11,7 @@ def main():
     screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")
+    bg_img_r = pg.transform.flip(bg_img, True, False)
     
     kk_img = pg.image.load("fig/3.png")
     kk_img = pg.transform.flip(kk_img,True,False)
@@ -25,12 +26,12 @@ def main():
             if event.type == pg.QUIT: return
         #背景を左に流す
         bg_x -= speed
-        if bg_x <= -800:  # 背景画像の幅分ずれたらリセット
+        if bg_x <= -1600:  # 背景画像の幅分ずれたらリセット
             bg_x = 0
         #背景を二枚準備
         screen.blit(bg_img, [bg_x, 0])
         #残像の補正
-        screen.blit(bg_img, [bg_x + 800, 0])
+        screen.blit(bg_img_r, [bg_x + 1600, 0])
         #こうかとんを表示
         screen.blit(kk_img, [300, 200]) 
 
